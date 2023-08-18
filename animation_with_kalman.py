@@ -65,7 +65,7 @@ def update(frame, positions_x, positions_y, positions_z, sc, colors, kalman_filt
     return sc,
 
 if __name__ == '__main__':
-    csv_file_path = 'sourcedata.csv' #change name for data
+    csv_file_path = 'initgood.csv' #change name for data
 
     times, accelerations_x, accelerations_y, accelerations_z = read_csv(csv_file_path)
 
@@ -107,6 +107,6 @@ if __name__ == '__main__':
                         fargs=(positions_x, positions_y, positions_z, sc, colors, kalman_filters))
 
     # Make GIF
-    ani.save('kalman2.gif', writer='pillow', fps=30)
+    ani.save('initials1.gif', writer='pillow', fps=30)
 
     plt.show()
